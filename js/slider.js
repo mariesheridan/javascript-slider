@@ -106,7 +106,9 @@ window.addEventListener('load', event => {
         prevSlide?.removeEventListener("click", prevSlideListener);
         prevSlide?.addEventListener("click", prevSlideListener);
 
-        setupSliderSwipe(categoryDiv);
+        if (mobileState.matches) {
+            setupSliderSwipe(categoryDiv);
+          }
     }
 
     const setupSliderSwipe = (categoryDiv) => {
